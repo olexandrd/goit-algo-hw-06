@@ -15,4 +15,10 @@ DFS and DFS algorithms from study materials were modified - it returns results i
 
 ![graph](images/graph02.png)
 
-According to results, DFS return longest path included all nodes consequently, BFS included all nodes but it returned closest neighbors.
+According to results, DFS return longest path included all possible nodes consequently, BFS included all nodes but it returned closest neighbors first.
+
+## 3. Dijkstra algorithm
+Dijkstra algorithm function is located [here](03/dijkstra_search.py). 
+
+Visualisation of Dijkstra algorithm search, time between cities:
+![graph](images/graph03.png)

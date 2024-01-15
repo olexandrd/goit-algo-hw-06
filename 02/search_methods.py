@@ -1,16 +1,17 @@
 from collections import deque
 
+
 def dfs_recursive(graph, vertex, visited=None):
     if visited is None:
         visited = set()
-    
+
     visited.add(vertex)
     result = [vertex]
-    
+
     for neighbor in graph[vertex]:
         if neighbor not in visited:
             result.extend(dfs_recursive(graph, neighbor, visited))
-    
+
     return result
 
 
@@ -27,6 +28,5 @@ def bfs_recursive(graph, queue, visited=None):
     return result
 
 
-
-if __name__ == '__main__':
-    print('Do not run this file')
+if __name__ == "__main__":
+    print("Do not run this file")
