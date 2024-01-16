@@ -17,7 +17,6 @@ edges = [('Київ', 'Львів', {'вага': 8}),
          ('Івано-Франківськ', 'Хмельницький', {'вага': 2}),
          ('Хмельницький', 'Вінниця', {'вага': 2}),
          ('Вінниця', 'Чернівці', {'вага': 14}),
-         ('Чернівці', 'Полтава', {'вага': 28}),
          ('Полтава', 'Суми', {'вага': 10}),
          ('Суми', 'Київ', {'вага': 16}),
          ('Київ', 'Івано-Франківськ', {'вага': 12}),
@@ -41,6 +40,18 @@ nx.draw(G, pos, with_labels=True, node_size=700, node_color='skyblue', font_size
 edge_labels = nx.get_edge_attributes(G, 'вага')
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color='red')
 
+# Printing graph stats on md formated table
+print('|Graph stats||')
+print('|-|-|')
+print(f'|nodes|{G.nodes}|')
+print(f'|edges|{G.edges}|')
+print(f'|nodes count|{len(G.nodes)}|')
+print(f'|edges count|{len(G.edges)}|')
+print(f'|in_degree|{G.in_degree}|')
+print(f'|out_degree|{G.out_degree}|')
+print(f'|in_edges|{G.in_edges}|')
+print(f'|out_edges|{G.out_edges}|')
+
 # Вивід графу
-plt.show()
+#plt.show()
 
