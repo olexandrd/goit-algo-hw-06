@@ -27,6 +27,28 @@ def bfs_recursive(graph, queue, visited=None):
             queue.extend(set(graph[vertex]) - visited)
     return result
 
+def dfs_recursive_steps(graph, vertex, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(vertex)
+    
+    for neighbor in graph[vertex]:
+        print(f"|Node: {vertex}| neighbor: {neighbor}| Visited: {visited}|")
+        if neighbor not in visited:
+            dfs_recursive_steps(graph, neighbor, visited)
+
+
+def bfs_recursive_steps(graph, queue, visited=None):
+    if visited is None:
+        visited = set()
+    if not queue:
+        return
+    vertex = queue.popleft()
+    if vertex not in visited:
+        print(f"|Node: {vertex}| Queue: {queue}| Visited: {visited}|")
+        visited.add(vertex)
+        queue.extend(set(graph[vertex]) - visited)
+    bfs_recursive_steps(graph, queue, visited)
 
 if __name__ == "__main__":
     print("Do not run this file")

@@ -43,15 +43,21 @@ nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color='red')
 # Printing graph stats on md formated table
 print('|Graph stats||')
 print('|-|-|')
+print(f'|is directed|{nx.is_directed(G)}|')
 print(f'|nodes|{G.nodes}|')
 print(f'|edges|{G.edges}|')
-print(f'|nodes count|{len(G.nodes)}|')
-print(f'|edges count|{len(G.edges)}|')
-print(f'|in_degree|{G.in_degree}|')
-print(f'|out_degree|{G.out_degree}|')
-print(f'|in_edges|{G.in_edges}|')
-print(f'|out_edges|{G.out_edges}|')
+print(f'|nodes count|{G.number_of_nodes()}|')
+print(f'|edges count|{G.number_of_edges()}|')
+print(f'|degree centrality|{nx.degree_centrality(G)}|')
+print(f'|betweenness centrality|{nx.betweenness_centrality(G)}|')
+print(f'|closeness centrality|{nx.closeness_centrality(G)}|')
+print(f'|density|{nx.density(G)}|')
+print(f'|in degree|{G.in_degree}|')
+print(f'|out degree|{G.out_degree}|')
+print(f'|in edges|{G.in_edges}|')
+print(f'|out edges|{G.out_edges}|')
+
 
 # Вивід графу
-#plt.show()
+plt.show()
 
